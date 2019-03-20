@@ -1,0 +1,5 @@
+*.zip
+__pycache__/*
+downloads/*
+images/*
+my_project/*

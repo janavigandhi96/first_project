@@ -9,12 +9,79 @@
 
 
 # print largest number
-a=1
-b=2
-c=3
-if(a>b and a>c):
-	print(a,"is largest")
-elif b>a and b>c:
-	print(b,"is largest")
-else:
-	print(c ,"is largest")
+# a=1
+# b=2
+# c=3
+# if(a>b and a>c):
+# 	print(a,"is largest")
+# elif b>a and b>c:
+# 	print(b,"is largest")
+# else:
+# 	print(c ,"is largest")
+
+
+#arithmatic operations(input bt user)
+# v1=int(input("type variable 1: \n"))
+# v2=int(input("type variable 2: \n"))
+# print("1.Addition")
+# print("2.Subtraction")
+# print("3.division")
+# print("4.floor division")
+# print("5.multiplication")
+# print("6.modulo")
+# print("7.square root")
+# print("8.power")
+# print("9.percentage")
+# print("\n")
+
+# v3=int(input("type variable 3:"))
+
+# if(v3==1):
+# 	print("1.addition of v1 & v2=",v1+v2)
+# elif v3==2:
+# 	if v2 > v1:
+# 		print('Subtraction not possible...v2 > v1')
+# 	else:
+# 		print("2.subtraction of v1 & v2=",v1-v2)
+# elif v3==3:
+# 	try:
+# 		print("3.division of v1 & v2=",v1/v2)
+# 	except:
+# 		print("cant divide by 0")
+# elif v3==4:
+# 	try:
+# 		print("4.floor divide of v1&v2=",v1//v2)
+# 	except:
+# 		print("cant divide by 0")
+# elif v3==5:
+# 	print("5.multiplication of v1&v2=",v1*v2)
+# elif v3==6:
+# 	print("6.modulo of v1 & v2=",v1%v2)
+# elif v3==7:
+# 	x=v1**(1.0/float(v2))
+# 	print("7.square root of v1 and v2=",x)
+# elif v3==8:
+# 	print("8.power of v1 & v2=",v1**v2)
+# elif v3==9:
+# 	print("9.percentage of v1 and v2=",(v1/v2)*100)
+# else:
+# 	print("invalid")
+
+
+#matrices
+# a=[[1,0,0],[0,1,0],[0,0,1]]
+# a = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+# b=[[1,2,3],[3,2,1],[1,1,1,]]
+# m=[[0,0,0],[0,0,0],[0,0,0]]
+
+a = [[1, 1], [1, 1]]
+b = [[3, 3], [3, 3]]
+
+
+if(len(a)==len(b)):
+	m = [[0 for x in range(len(a))] for y in range(len(b))]
+	for i in range(len(a)):
+		for j in range(len(b)):
+			m[i][j]=a[i][j]+b[i][j]
+for matrix in m:
+	print(matrix)
