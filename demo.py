@@ -2,10 +2,10 @@
 
 # num=[1,2,3,4,5,6,7,8,9,10]
 # for nums in num:
-# 	if(nums%2==0):
-# 		print(nums, "is even")
-# 	else:
-# 		print(nums," is odd")
+#   if(nums%2==0):
+#       print(nums, "is even")
+#   else:
+#       print(nums," is odd")
 
 
 # print largest number
@@ -13,11 +13,11 @@
 # b=2
 # c=3
 # if(a>b and a>c):
-# 	print(a,"is largest")
+#   print(a,"is largest")
 # elif b>a and b>c:
-# 	print(b,"is largest")
+#   print(b,"is largest")
 # else:
-# 	print(c ,"is largest")
+#   print(c ,"is largest")
 
 
 #arithmatic operations(input bt user)
@@ -37,51 +37,108 @@
 # v3=int(input("type variable 3:"))
 
 # if(v3==1):
-# 	print("1.addition of v1 & v2=",v1+v2)
+#   print("1.addition of v1 & v2=",v1+v2)
 # elif v3==2:
-# 	if v2 > v1:
-# 		print('Subtraction not possible...v2 > v1')
-# 	else:
-# 		print("2.subtraction of v1 & v2=",v1-v2)
+#   if v2 > v1:
+#       print('Subtraction not possible...v2 > v1')
+#   else:
+#       print("2.subtraction of v1 & v2=",v1-v2)
 # elif v3==3:
-# 	try:
-# 		print("3.division of v1 & v2=",v1/v2)
-# 	except:
-# 		print("cant divide by 0")
+#   try:
+#       print("3.division of v1 & v2=",v1/v2)
+#   except:
+#       print("cant divide by 0")
 # elif v3==4:
-# 	try:
-# 		print("4.floor divide of v1&v2=",v1//v2)
-# 	except:
-# 		print("cant divide by 0")
+#   try:
+#       print("4.floor divide of v1&v2=",v1//v2)
+#   except:
+#       print("cant divide by 0")
 # elif v3==5:
-# 	print("5.multiplication of v1&v2=",v1*v2)
+#   print("5.multiplication of v1&v2=",v1*v2)
 # elif v3==6:
-# 	print("6.modulo of v1 & v2=",v1%v2)
+#   print("6.modulo of v1 & v2=",v1%v2)
 # elif v3==7:
-# 	x=v1**(1.0/float(v2))
-# 	print("7.square root of v1 and v2=",x)
+#   x=v1**(1.0/float(v2))
+#   print("7.square root of v1 and v2=",x)
 # elif v3==8:
-# 	print("8.power of v1 & v2=",v1**v2)
+#   print("8.power of v1 & v2=",v1**v2)
 # elif v3==9:
-# 	print("9.percentage of v1 and v2=",(v1/v2)*100)
+#   print("9.percentage of v1 and v2=",(v1/v2)*100)
 # else:
-# 	print("invalid")
+#   print("invalid")
 
 
-#matrices
+# addition matrices
 # a=[[1,0,0],[0,1,0],[0,0,1]]
 # a = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
 # b=[[1,2,3],[3,2,1],[1,1,1,]]
 # m=[[0,0,0],[0,0,0],[0,0,0]]
 
-a = [[1, 1], [1, 1]]
-b = [[3, 3], [3, 3]]
+# a = [[1, 1], [1, 1]]
+# b = [[3, 3], [3, 3]]
 
 
-if(len(a)==len(b)):
-	m = [[0 for x in range(len(a))] for y in range(len(b))]
-	for i in range(len(a)):
-		for j in range(len(b)):
-			m[i][j]=a[i][j]+b[i][j]
-for matrix in m:
-	print(matrix)
+# if(len(a)==len(b)):
+#   m = [[0 for x in range(len(a))] for y in range(len(b))]
+#   print(m)
+#   for i in range(len(a)):
+#       for j in range(len(b)):
+#           m[i][j]=a[i][j]+b[i][j]
+# for matrix in m:
+#   print(matrix)
+
+# # multiplication matrices
+# a = [[1, 2, 3], [4, 5, 6],[7, 8, 9]]
+# b = [[3, 3], [3, 3],[3,3]]
+
+# if(len(a[0])==len(b)):
+#   m = [[0 for x in range(len(b[0]))] for y in range(len(a))]
+#   for i in range(len(a)):
+#       for j in range(len(b[0])):
+#           for k in range(len(m)):
+#               m[i][j]+=a[i][k]*b[k][j]
+#   for matrix in m:
+#       print(matrix)
+# else:
+#   print("r2 and c1 does not match")
+
+# Palidrome
+# str=input()
+
+# str_lower=str.lower()
+# print("In lower case: ",str_lower)
+
+# str_rev=str_lower[-1::-1]
+# print("String is reverse: ",str_rev)
+
+# str_strip=str_lower.strip()
+# print("Strig is strip:",str_strip)
+
+# if str_rev == str_strip:
+#   print("Its Palidrome")
+# else:
+#   print("Its not Palidrome")
+
+# str="JANAVI"
+# print(str.lower())
+
+
+
+# def company():
+#     alist = []
+#     comp_detail = {'google':{'emp1': {'salary':10000, 'designation':'Coder'},'emp2': {'salary':20000, 'designation':'Tester'},'emp3': {'salary':30000, 'designation':'Developer'} } }, {'Microsoft':{'emp1': {'salary':20000, 'designation':'Hr'},'emp2': {'salary':10000, 'designation':'accountant'},'emp3': {'salary':5000, 'designation':'Clerk'} } }, {'Adobe':{'emp1': {'salary':25000, 'designation':'Project manager'},'emp2': {'salary':30000, 'designation':'Manager'},'emp3': {'salary':50000, 'designation':'M.D'} } }
+#     alist = [x for x in comp_detail]
+#     l=alist.sort()
+# company()
+
+def gnome(alist):
+        for i in range(1,len(alist)):
+            while i!=0 and alist[i] <= alist[i-1]:
+                alist[i],alist[i-1] = alist[i-1], alist[i]
+                print(alist[i],alist[i-1])
+                i -=1
+            print(alist)
+               
+alist = [34,2,10,-9,27,97]
+gnome(alist)
+print("Sorted list: ",alist)
