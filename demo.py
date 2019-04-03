@@ -121,24 +121,49 @@
 
 # str="JANAVI"
 # print(str.lower())
+def company():
+    alist = []
+    comp_dets ={
+    'google': {
+        'emp1': {'designation': 'coder', 'salary': 50000},
+        'emp2': {'designation': 'developer', 'salary': 20000},
+        'emp3': {'designation': 'tester', 'salary': 30000}
+        }, 
+    'adobe': {
+        'emp1': {'designation': 'hr', 'salary': 23000},
+        'emp2': {'designation': 'clerk', 'salary': 5000},
+        'emp3': {'designation': 'accountant', 'salary': 5000}
+          },
+    'microsoft': {
+        'emp1': {'designation': 'manager', 'salary': 60000},
+        'emp2': {'designation': 'project manager', 'salary': 55000},
+        'emp3': {'designation': 'director', 'salary': 45000}
+          }
+    }
 
 
 
-# def company():
-#     alist = []
-#     comp_detail = {'google':{'emp1': {'salary':10000, 'designation':'Coder'},'emp2': {'salary':20000, 'designation':'Tester'},'emp3': {'salary':30000, 'designation':'Developer'} } }, {'Microsoft':{'emp1': {'salary':20000, 'designation':'Hr'},'emp2': {'salary':10000, 'designation':'accountant'},'emp3': {'salary':5000, 'designation':'Clerk'} } }, {'Adobe':{'emp1': {'salary':25000, 'designation':'Project manager'},'emp2': {'salary':30000, 'designation':'Manager'},'emp3': {'salary':50000, 'designation':'M.D'} } }
-#     alist = [x for x in comp_detail]
-#     l=alist.sort()
-# company()
+    alist = [(c ,emp, comp_dets[c][emp]) for c in comp_dets for emp in comp_dets[c]]
+    print(alist)
+    print("\n")
+    '''Maximum salary'''
+    print("Name wised  company:\n",sorted(comp_dets))
+    max_sal = max([comp_dets[c][emp]['salary'] for c in comp_dets for emp in comp_dets[c]])
+    max_cmp = [(c , comp_dets[c][emp]) for c in comp_dets for emp in comp_dets[c] if comp_dets[c][emp]['salary'] == max_sal]
+    print(max_cmp)
+    print("\n")
 
-def gnome(alist):
-        for i in range(1,len(alist)):
-            while i!=0 and alist[i] <= alist[i-1]:
-                alist[i],alist[i-1] = alist[i-1], alist[i]
-                print(alist[i],alist[i-1])
-                i -=1
-            print(alist)
-               
-alist = [34,2,10,-9,27,97]
-gnome(alist)
-print("Sorted list: ",alist)
+    '''Minimum salary'''
+    min_sal = min([comp_dets[cd][em]['salary'] for cd in comp_dets for em in comp_dets[cd]]) 
+    min_cmp = [(cd , comp_dets[cd][em]) for cd in comp_dets for em in comp_dets[cd] if comp_dets[cd][em]['salary'] == min_sal]
+    print(min_cmp)
+    print("\n")
+    '''sorting'''
+    
+    sort_sal = sorted([comp_dets[c][emp]['salary'] for c in comp_dets for emp in comp_dets[c]],reverse=True)
+    print(sort_sal)
+    
+    for i in sort_sal:
+        sort_cmp = ([(c,emp,comp_dets[c][emp]['salary']) for c in comp_dets for emp in comp_dets[c] if  comp_dets[c][emp]['salary'] == i ] )
+        print(sort_cmp)
+company()
