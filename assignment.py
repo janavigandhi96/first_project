@@ -346,3 +346,51 @@
 #         sort_cmp = ([(c,emp,comp_dets[c][emp]['salary']) for c in comp_dets for emp in comp_dets[c] if  comp_dets[c][emp]['salary'] == i ] )
 #         print(sort_cmp)
 # company()
+
+
+# --------------------------------------
+ 
+
+# distance from source to destination
+def src_dest(str1,str2):
+	set1 = set(str1)
+	set2 = set(str2)
+	print(set1,set2) 
+	temp = str1[:] 
+	t = []
+	for i in str2:
+		if i in str2:
+			t.append
+		diff = len(str2)-len(t)
+	for i in range(diff):
+		t.append('0')
+	if len(t) == len(str2):
+		for i in range(len(str2)):
+			if t[i] ==str2[i]:
+				pass
+			else:
+				out = t[i]
+				t[i] = str2[i]
+				for  j in range(len(str2[i:])):
+					if out ==str2[i+j]:
+						t[i+j] =out
+	print(''.join(t))
+
+	if len(t) == len(str2):
+		ins = len(set1.intersection(set2))
+		i = len(str2)-ins
+		d = len(str1) - ins
+		s = len(str2) -len(t)
+		print("insertion",i)
+		print("deletion",d)
+		print("substitution",s)
+	# if len(t) == len(str1):
+	# 	ins = len(set1.intersection(set2))
+	# 	i = len(str1)-ins
+	# 	d = len(str2) - ins
+	# 	s = len(str1) -len(t)
+	# 	print("insertion2",i)
+	# 	print("deletion",d)
+	# 	print("substitution",s)
+	
+src_dest('may','mayhen')

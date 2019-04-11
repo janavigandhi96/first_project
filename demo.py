@@ -121,49 +121,34 @@
 
 # str="JANAVI"
 # print(str.lower())
-def company():
-    alist = []
-    comp_dets ={
-    'google': {
-        'emp1': {'designation': 'coder', 'salary': 50000},
-        'emp2': {'designation': 'developer', 'salary': 20000},
-        'emp3': {'designation': 'tester', 'salary': 30000}
-        }, 
-    'adobe': {
-        'emp1': {'designation': 'hr', 'salary': 23000},
-        'emp2': {'designation': 'clerk', 'salary': 5000},
-        'emp3': {'designation': 'accountant', 'salary': 5000}
-          },
-    'microsoft': {
-        'emp1': {'designation': 'manager', 'salary': 60000},
-        'emp2': {'designation': 'project manager', 'salary': 55000},
-        'emp3': {'designation': 'director', 'salary': 45000}
-          }
-    }
 
-
-
-    alist = [(c ,emp, comp_dets[c][emp]) for c in comp_dets for emp in comp_dets[c]]
-    print(alist)
-    print("\n")
-    '''Maximum salary'''
-    print("Name wised  company:\n",sorted(comp_dets))
-    max_sal = max([comp_dets[c][emp]['salary'] for c in comp_dets for emp in comp_dets[c]])
-    max_cmp = [(c , comp_dets[c][emp]) for c in comp_dets for emp in comp_dets[c] if comp_dets[c][emp]['salary'] == max_sal]
-    print(max_cmp)
-    print("\n")
-
-    '''Minimum salary'''
-    min_sal = min([comp_dets[cd][em]['salary'] for cd in comp_dets for em in comp_dets[cd]]) 
-    min_cmp = [(cd , comp_dets[cd][em]) for cd in comp_dets for em in comp_dets[cd] if comp_dets[cd][em]['salary'] == min_sal]
-    print(min_cmp)
-    print("\n")
-    '''sorting'''
-    
-    sort_sal = sorted([comp_dets[c][emp]['salary'] for c in comp_dets for emp in comp_dets[c]],reverse=True)
-    print(sort_sal)
-    
-    for i in sort_sal:
-        sort_cmp = ([(c,emp,comp_dets[c][emp]['salary']) for c in comp_dets for emp in comp_dets[c] if  comp_dets[c][emp]['salary'] == i ] )
-        print(sort_cmp)
-company()
+# 	====================
+def src_dest(str1,str2):
+	set1 = set(str1)
+	set2 = set(str2)
+	print(set1,set2) 
+	temp = str1[:] 
+	t = []
+	for i in str2:
+		if i in str2:
+			t.append
+		diff = len(str2)-len(t)
+	for i in range(diff):
+		t.append('0')
+	if len(t) == len(str2):
+		for i in range(len(str2)):
+			if t[i] ==str2[i]:
+				pass
+			else:
+				out = t[i]
+				t[i] = str2[i]
+				for  j in range(len(str2[i:])):
+					if out ==str2[i+j]:
+						t[i+j] =out
+	print(''.join(t))
+	i = len(set1.intersection(set2))
+	x = len(str1) - i
+	y = len(str2) - i
+	print(y-x)
+	
+src_dest('april','aprilia')
