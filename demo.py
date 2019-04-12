@@ -123,32 +123,3 @@
 # print(str.lower())
 
 # 	====================
-def src_dest(str1,str2):
-	set1 = set(str1)
-	set2 = set(str2)
-	print(set1,set2) 
-	temp = str1[:] 
-	t = []
-	for i in str2:
-		if i in str2:
-			t.append
-		diff = len(str2)-len(t)
-	for i in range(diff):
-		t.append('0')
-	if len(t) == len(str2):
-		for i in range(len(str2)):
-			if t[i] ==str2[i]:
-				pass
-			else:
-				out = t[i]
-				t[i] = str2[i]
-				for  j in range(len(str2[i:])):
-					if out ==str2[i+j]:
-						t[i+j] =out
-	print(''.join(t))
-	i = len(set1.intersection(set2))
-	x = len(str1) - i
-	y = len(str2) - i
-	print(y-x)
-	
-src_dest('april','aprilia')
