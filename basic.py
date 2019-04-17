@@ -326,3 +326,452 @@ Sample string :'''
 # import platform
 # print(os.name,platform.release(), platform.system())
 
+'''44. Write a Python program to locate Python site-packages.'''
+# import site 
+# print(site.getsitepackages())
+
+
+# '''45. Write a python program to call an external command in Python'''(not done)
+# filepath = '1.file.txt'
+# import os
+# os.startfile(filepath)
+
+'''46. Write a python program to get the path and name of the file that is currently executing.'''
+# import os
+# print("current file name ",os.path.realpath(__file__))
+
+
+'''47. Write a Python program to find out the number of CPUs using.'''
+# import multiprocessing
+# print("cpu.no:",multiprocessing.cpu_count())
+
+# 48. Write a Python program to parse a string to Float or Integer.
+# n = '54.95'
+# print("string to float",float(n))
+# print("string to int",int(float(n)))
+
+
+'''49. Write a Python program to list all files in a directory in Python.'''
+# from os import listdir
+# from os.path import isfile, join
+# files_list = [f for f in listdir('/janvi')if isfile(join('/janvi',f))]
+# print(files_list)
+
+'''50. Write a Python program to print without newline or space.'''
+# for i in range(1,10):
+# 	print(i,end = "")
+
+'''51. Write a Python program to determine profiling of Python programs'''
+# import cProfile
+# def sum():
+# 	print("add",10+20)
+# cProfile.run('sum()')
+
+
+'''52. Write a Python program to print to stderr'''
+# import sys
+# def eprint(*args, **kwargs):
+#     print(*args, file=sys.stderr, **kwargs)
+# eprint("abc", "efg", "xyz", sep="--")
+
+'''53. Write a python program to access environment variables.'''
+# import os
+# print(os.environ)
+# print("*****************")
+# print(os.environ['HOMEPATH'])
+# print("*****************")
+# print(os.environ['Path'])
+
+'''54. Write a Python program to get the current username'''
+# import getpass
+# print(getpass.getuser())
+
+'''55. Write a Python to find local IP addresses using Python's stdlib'''
+# import socket
+# print(socket.gethostbyname(socket.gethostname()))
+
+
+'''56. Write a Python program to get height and width of the console window.(not done) '''
+# def terminal_size():
+#     import fcntl, termios, struct
+#     th, tw, hp, wp = struct.unpack('HHHH',
+#         fcntl.ioctl(0, termios.TIOCGWINSZ,
+#         struct.pack('HHHH', 0, 0, 0, 0)))
+#     return tw, th
+
+# print('Number of columns and Rows: ',terminal_size())
+
+'''56. Write a Python program to get height and width of the console window.'''
+# import time 
+# def sum_of_n_numbers(n):
+# 	start_time = time.time()
+# 	s = 0
+# 	for  i in range(1, n+1):
+# 		s = s + i
+# 	end_time = time.time()
+# 	return s, end_time-start_time
+# n = 5
+# print(sum_of_n_numbers(n))
+
+
+'''58. Write a python program to sum of the first n positive integers.'''
+# n = int(input("enter positive no. "))
+# total = (n*(n+1))/2
+# print("sum of first n no:",total)
+
+
+'''59. Write a Python program to convert height (in feet and inches) to centimeters'''
+# feet  = int(input("enter foot: "))
+# inches = int(input("enter inches: "))
+# cent = (feet*30.48) + (inches * 2.54)
+# print("height in centimeters: ",round(cent,2))
+
+'''60. Write a Python program to calculate the hypotenuse of a right angled triangle'''
+# a = int(input("enter widht:"))
+# b = int(input("enter height:"))
+# hypotenuse = ((a**2) +(b**2))**(1/2)
+# print("the hypotenuse of a right angle triangle is: ",round(hypotenuse,2))
+
+'''61. Write a Python program to convert the distance (in feet) to inches, yards, and miles'''
+# feet = int(input("enter distance:"))
+# inches = feet * 12
+# yards = feet/3
+# miles = feet / 5280
+# print("feet to inches: {}\nfeet to yards: {}\nfeet into miles:{}\n".format(inches,round(yards,3),round(miles,3)))
+
+'''62. Write a Python program to convert all units of time into seconds. '''
+# day = int(input("enter days: ")) * 86400
+# hour = int(input("enter hours: ")) * 3600
+# minitues = int(input("enter minitues: ")) * 60
+# seconds = int(input("enter seconds: "))
+# time = day + hour + minitues + seconds
+# print("convert all units of time into seconds",time)
+
+
+'''63. Write a Python program to get an absolute file path'''
+# def get_file(path_fname):
+# 	import os
+# 	return os.path.abspath('path_fname')
+# print("absolute file path: ",get_file('1.file.txt'))
+
+'''64. Write a Python program to get file creation and modification date/times.(not done)'''
+# import os.path, time
+# print("last modified: %s" % time.ctime(os.path.getmtime('2.file.txt'))) 
+# print("created: %s" % time.ctime(os.path.getctime('2.file.txt')))
+
+'''65. Write a Python program to convert seconds to day, hour, minutes and seconds'''
+# seconds = int(input("enter seconds: "))
+# day = seconds // 86400
+# seconds %= 86400
+# hour = seconds // 3600
+# seconds %=3600
+# minitues =seconds // 60
+# seconds %=60
+# print("days:hours:mins:secs--->{} : {} : {} : {} ".format(day,hour,minitues,seconds))
+
+# 66. Write a Python program to calculate body mass index
+# weight =float(input("enter in kg: ")) 
+# height = float(input("enter in foot: "))
+# bmi = (weight/(height)**2)*703
+# print("bmi = ", bmi)
+
+'''67. Write a Python program to convert pressure in kilopascals to pounds per square inch, a millimeter of mercury (mmHg) and atmosphere pressure'''
+# kilopascals = float(input("enter kilopascals: "))
+# pounds = kilopascals/6.895
+# mercury = kilopascals/7.501
+# atmosphere = kilopascals/101.325
+# print("pressure in kilopascals to pounds per square inch :{}\nmillimeter of mercury (mmHg):{}\natmosphere pressure:{}".format(round(pounds,2), round(mercury,2), round(atmosphere,2)))
+
+'''68. Write a Python program to calculate the sum of the digits in an integer.'''
+# number = map(int, str(input('Enter a number: ')))
+# print(sum(number))
+
+'''69. Write a Python program to sort three integers without using conditional statements and loops'''
+# a = int(input("a: "))
+# b = int(input("b: "))
+# c = int(input("c: "))
+# mx = max(a,b,c)
+# mi = min(a,b,c)
+# mid = a + b +c - mi - mx
+# print("sort:", mi, mid, mx )
+
+'''70. Write a Python program to sort files by date. '''
+# import glob
+# import os
+# files = glob.glob("*.txt")
+# files.sort(key = os.path.getmtime)
+# print("\n".join(files))
+
+'''71. Write a Python program to get a directory listing, sorted by creation date.'''
+# from stat import S_ISREG, ST_CTIME, ST_MODE
+# import os, sys, time
+# dir_path =sys.argv[1] if len(sys.argv) == 2 else r'.' 
+# data = (os.path.join(dir_path,fn) for fn in os.listdir(dir_path))
+# data = ((os.stat(path),path)for path in data)
+# data =((stat[ST_CTIME],path)
+# 		for stat,path in data if S_ISREG(stat[ST_MODE]))
+# for cdate, path in sorted(data):
+# 	print(time.ctime(cdate), os.path.basename(path))
+
+'''72. Write a Python program to get the details of math module.'''
+# import math
+# print(dir(math))
+
+'''73. Write a Python program to calculate midpoints of a line'''
+# x1 = int(input("enter value of x1:"))
+# x2 = int(input("enter value of x2:"))
+# y1 = int(input("enter value of y1:"))
+# y2 = int(input("enter value of y2:"))
+# midpoints = ( ( (x1 + x2) / 2) ,( (y1 + y2) / 2) )
+# print("midpoints of line: ",midpoints)
+
+'''74. Write a Python program to hash a word.'''
+# soundex = [0,1,2,3,0,1,2,0,0,2,2,4,5,5,0,1,2,6,2,3,0,1,0,2,0,2]
+# word = input("input the word to be hashed: ")
+# word = word.upper()
+# coded = word[0]
+# for a in word[1:len(word)]:
+# 	i = 65 - ord(a)
+# 	coded  = coded + str(soundex[i])
+# print("the coded word is :"+ coded)
+
+'''75. Write a Python program to get the copyright information'''
+# import sys
+# print(sys.copyright)
+
+'''76. Write a Python program to get the command-line arguments (name of the script, the number of arguments, arguments) passed to a script. '''
+# import sys
+# print("name of the scrip:",sys.argv[0])
+# print("number of arguments: ",len(sys.argv))
+# print("arguments: ",str(sys.argv))
+
+'''77. Write a Python program to test whether the system is a big-endian platform or little-endian platform.'''
+# import sys
+# if sys.byteorder == 'big':
+# 	print("big-endian platform")
+# else:
+# 	print("little - endian platform")
+
+'''78. Write a Python program to find the available built-in modules.'''
+# import sys
+# print(sys.builtin_module_names)
+
+'''79. Write a Python program to get the size of an object in bytes.'''
+# import sys
+# i = 1
+# f = 10.5
+# s ='four'
+# print("getsize of int",sys.getsizeof(i))
+# print("getsize of float",sys.getsizeof(f))
+# print("getsize of string",sys.getsizeof(s))
+
+'''80. Write a Python program to get the current value of the recursion limit.'''
+# import sys
+# print("current value of the recursion limit: ",sys.getrecursionlimit())
+
+'''81. Write a Python program to concatenate N strings. '''
+# l = ["red","black","yellow"]
+# print('-'.join(l))
+
+'''82. Write a Python program to calculate the sum over a container'''
+# l = [10,20,30]
+# print("sum over container: ",sum(l))
+
+'''83. Write a Python program to test whether all numbers of a list is greater than a certain number'''
+# l = [10, 20, 30]
+# print(all(x>1 for x in l))
+# print(all(y>40 for y in l ) )
+
+'''84. Write a Python program to count the number occurrence of a specific character in a string.'''
+# s = "Write a Python program to count the number "
+# print(s.count('t'))
+
+'''85. Write a Python program to check if a file path is a file or a directory.'''
+# import os
+# p = '/janvi/'
+# if os.path.isdir(p):
+# 	print("it is a directory")
+# elif os.path.isfile(p):
+# 	print("its a file")
+# else:
+# 	print("its a special file")
+
+'''86. Write a Python program to get the ASCII value of a character.'''
+# c = 'p'
+# print("ascii character: " ,ord(c))
+
+'''87. Write a Python program to get the size of a file.'''
+# import sys
+# print("size of file is: ",sys.getsizeof('2.file.txt'))
+
+
+'''88. Given variables x=30 and y=20, write a Python program to print t "30+20=50".'''
+# x = 10
+# y = 20
+
+# print("{} + {} = {}".format(x,y,(x+y))) 
+
+'''89. Write a Python program to perform an action if a condition is true.'''
+# value = 1 
+# if value == 1:
+# 	print("first day of the month")
+
+'''90. Write a Python program to create a copy of its own source code.'''
+# with open(file = "testfile.txt", mode='r')as f:
+# 	print(f.readlines())
+
+'''91. Write a Python program to swap two variables.'''
+# a = 10
+# b = 20
+# print("before swapping")
+# print("a = {}\nb = {}".format(a,b))
+# c = b
+# b = a 
+# a = c 
+# print("swaping a and b")
+# print("a = {}\nb = {}".format(a,b))
+
+'''92. Write a Python program to define a string containing special characters in various forms.'''
+# print("/{""}$@#&")
+# print("/{""}$@#&")
+# print("/{""}$@#&")
+# print("/{""}($@#&''')")
+
+'''93. Write a Python program to get the identity of an object.'''
+# n = 10
+# print(id(n))
+
+'''94. Write a Python program to convert a byte string to a list of integers.'''
+# s = b'Abc'
+# print(list(s))
+
+'''95. Write a Python program to check if a string is numeric.'''
+# s =  'a123'
+# print("its numeric:",s.isdecimal())
+
+'''96. Write a Python program to print the current call stack'''
+# import traceback
+# def f1():
+# 	return abc()
+# def abc():
+# 	traceback.print_stack()
+# f1()
+# print()
+
+'''97. Write a Python program to list the special variables used within the language. '''
+# s_var_names = sorted((set(globals().keys()) | set(__builtins__.__dict__.keys())) - set('__names i'.split()))
+# print("\n".join(' '.join(s_var_names[i:i+8]) for i in range(0,len(s_var_names),8)))
+
+'''98. Write a Python program to get the system time.'''
+# import time 
+# print(time.ctime())
+
+'''99. Write a Python program to clear the screen or terminal.'''
+# import os, time
+# os.system('cls')
+
+'''100. Write a Python program to get the name of the host on which the routine is running'''
+# import socket
+# print(socket.gethostname())
+
+'''101. Write a Python program to access and print a URL's content to the console'''
+# from http.client import HTTPConnection
+# conn = HTTPConnection("google.com")
+# conn.request("GET","/")
+# result = conn.getresponse()
+# contents = result.read() 
+# print(contents)
+
+'''102. Write a Python program to get system command output.'''
+# import subprocess
+# returned_txt = subprocess.check_output("dir", shell =True, universal_newlines = True)
+# print("dir command to list file and directory")
+# print(returned_txt)
+
+'''103. Write a Python program to extract the filename from a given path.'''
+# import os
+# print(os.path.basename('/basic1.py'))
+
+'''104. Write a Python program to get the effective group id, effective user id, real group id, a list of supplemental group ids associated with the current process.(not done)'''
+# import os
+# print("\nEffective group id: ",os.getgroups())
+# print("Effective user id: ",os.geteuid())
+# print("Real group id: ",os.getgid())
+# print("List of supplemental group ids: ",os.getgroups())
+# print()
+
+'''105. Write a Python program to get the users environment.'''
+# import os
+# print(os.environ)
+
+'''106. Write a Python program to divide a path on the extension separator.'''
+# import os.path
+# for path in ['testfile.txt','filename','G:/janvi/testfile.txt','/','']:
+# 	print('"%s":' %path, os.path.splitext(path))
+
+'''107. Write a Python program to retrieve file properties.'''	
+# import os.path
+# import time
+# print("file: ",__file__)
+# print("access time: ",time.ctime(os.path.getatime(__file__)))
+# print("modified time: ",time.ctime(os.path.getmtime(__file__)))
+# print("change time: ",time.ctime(os.path.getctime(__file__)))
+# print("size of file: ",os.path.getsize(__file__))
+
+'''108. Write a Python program to find path refers to a file or directory when you encounter a path name'''
+# import os.path
+# for file in [__file__, os.path.dirname(__file__), '/','./broken_link']:
+# 	print("file: ",file)
+# 	print("absolute: ", os.path.isabs(file))
+# 	print("Is file: ",os.path.isfile(file))
+# 	print("is dir: ", os.path.isdir(file))
+# 	print("Is link: ",os.path.islink(file))
+# 	print("exist: ",os.path.exists(file))
+# 	print("link exist: ",os.path.lexists(file))
+# 	break
+
+'''109. Write a Python program to check if a number is positive, negative or zero'''
+# def check(a):
+# 	if a < 0:
+# 		print("a is negavtive")
+# 	elif a > 0:
+# 		print("a is positive")
+# 	else:
+# 		print("a is 0")
+# check(int(input("enter a number: ")))
+
+'''110. Write a Python program to get numbers divisible by fifteen from a list using an anonymous function'''
+# p = [10, 15, 30, 45]
+# z = list(filter(lambda z : (z % 15 == 0),p))
+# print(z)
+
+'''111. Write a Python program to make file lists from current directory using a wildcard.'''
+# import glob
+# file_list = glob.glob('*.*')
+# print(file_list)
+
+# 112. Write a Python program to remove the first item from a specified list.
+# s = [10,20,30,40,50]
+# print(s)
+# s.remove(s[0])
+# print(s)
+
+'''113. Write a Python program to input a number, if it is not a number generate an error message. '''
+# try:
+# 	s = int(input("enter a no.: "))
+# except ValueError:
+# 	print("pls enter a no")
+
+'''114. Write a Python program to filter the positive numbers from a list.'''
+# s = [10,20,30,-40]
+# a = []
+# for x in s:
+# 	if x > 0:
+# 		a.append(x)
+# print(a)
+
+'''115. Write a Python program to compute the product of a list of integers (without using for loop). '''
+from functools import reduce
+a = [10,20,30]
+a_prod = reduce((lambda x,y:x*y),a)
+print(a_prod)
