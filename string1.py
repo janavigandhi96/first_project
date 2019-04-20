@@ -94,9 +94,11 @@
 # print(b)
 
 '''11. Write a Python program to remove the characters which have odd index values of a given string.'''
-a = 'hello'
-rem =''
-for n in range(len(a)):
-	if n%2 == 0:
-		rem = rem + a[n]
-print(rem)
+# a = 'hello'
+# rem =''
+# for n in range(len(a)):
+# 	if n%2 == 0:
+# 		rem = rem + a[n]
+# print(rem)
+
+'''12. Write a Python program to count the occurrences of each word in a given sentence.'''

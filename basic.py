@@ -771,7 +771,166 @@ Sample string :'''
 # print(a)
 
 '''115. Write a Python program to compute the product of a list of integers (without using for loop). '''
-from functools import reduce
-a = [10,20,30]
-a_prod = reduce((lambda x,y:x*y),a)
-print(a_prod)
+# from functools import reduce
+# a = [10,20,30]
+# a_prod = reduce((lambda x,y:x*y),a)
+# print(a_prod)
+
+'''116. Write a Python program to print Unicode characters'''
+# str1 = u'\u004A\u0041\u004E\u0041\u0056\u0049'
+# print(str1)
+
+'''117. Write a Python program to prove that two string variables of same value point same memory location.'''
+# loc_str1 = 'abc'
+# loc_str2 = 'abc'
+# print("location of string1: ",hex(id(loc_str1)))
+# print("location of string2: ",hex(id(loc_str2)))
+
+'''118. Write a Python program to create a bytearray from a list'''
+# l = [10,20,30]
+# byte_list = bytearray(l)
+# for x in byte_list:
+# 	print(x)
+
+'''119. Write a Python program to display a floating number in specified numbers.'''
+# pi = 3.14159
+# print("the specified numbers is %f" %pi)
+# print("the specified numbers is %.2f" %pi)
+
+'''120. Write a Python program to format a specified string to limit the number of characters to 6.'''
+# s = "0123456789"
+# print("number of characters to 6: %.6s" %s)
+
+'''121. Write a Python program to determine if variable is defined or not'''
+# try:
+# 	a = 1
+# except NameError:
+# 	print("variable not defined")
+# else:
+# 	print("variable is defined")
+# try:
+# 	b
+# except NameError:
+# 	print("variable not defined")
+# else:
+# 	print("variable is defined")
+
+'''122. Write a Python program to empty a variable without destroying it'''
+# n = 20
+# m = {"x":20}
+# p = ["x", 20]
+# q = ("x",30)
+# print(type(n)())
+# print(type(m)())
+# print(type(p)())
+# print(type(q)())
+
+'''123. Write a Python program to determine the largest and smallest integers, longs, floats'''
+# import sys
+# print("the longest int: ",sys.int_info)
+# print("\nthe longest float: ",sys.float_info)
+# print("\nthe longest long: ",sys.maxsize)
+
+'''124. Write a Python program to check if multiple variables have the same value. '''
+# x = 20
+# y = 20
+# z = 20
+# if x == y == z == 20:
+# 	print("all values are same")
+
+'''125. Write a Python program to sum of all counts in a collections?'''
+# import collections
+# p = [2,3,3,4,5,6,4,2,1]
+# print(sum(collections.Counter(p).values()))
+
+
+'''126. Write a Python program to get the actual module object for a given object'''
+# from inspect import getmodule
+# from math import pow
+# print(getmodule(pow))
+
+'''127. Write a Python program to check if an integer fits in 64 bits'''
+# value = 54
+# print(value.bit_length())
+# if value.bit_length() <= 63:
+# 	print((-2**63).bit_length())
+# 	print((2**63).bit_length())
+
+'''128. Write a Python program to check if lowercase letters exist in a string.'''
+# Solution 1:
+# s ="HELLo"
+# for x in s:
+# 	if x.lower() in x:
+# 		print("lowercase exist")
+# solution 2
+# str1 = "ABCdEFi12354"
+# print(any(c.islower() for c in str1))
+
+'''129. Write a Python program to add leading zeroes to a string.''' 
+# s = '121.31'
+# print("add leading zero: ",s.ljust(10,'0'))
+
+'''130. Write a Python program to use double quotes to display strings.'''
+# import json
+# print(json.dumps({'A': 65, 'B' : 66, 'C' : 67}))
+
+'''131. Write a Python program to split a variable length string into variables'''
+# s = ['a', 'b', 'c']
+# n = [20.20,100]
+# x, y, z = (s + [""]*3)[:3]
+# p, q = (n + [""]*3)[:2]
+# print(x, y, z)
+# print(p,q)
+
+'''132. Write a Python program to list home directory without absolute path.'''
+# import os.path
+# print(os.path.expanduser('~'))
+
+'''133. Write a Python program to calculate the time runs (difference between start and current time) of a program.'''
+# from timeit import default_timer
+# def timer(n):
+# 	start = default_timer()
+# 	for row in range(0,n):
+# 		print(row)
+# 	print(default_timer()- start)
+# timer(10)
+
+'''134. Write a Python program to input two integers in a single line.'''
+# a, b = map(int,input("enter a & b: ").split())
+# print(a, b)
+
+'''135. Write a Python program to print a variable without spaces between values.'''
+# a = 30
+# print('value of a :"{}"'.format(a) ) 
+
+'''136. Write a Python program to find files and skip directories of a given directory. '''
+# import os
+# print([f for f in os.listdir('/janvi') if os.path.isfile(os.path.join('/janvi',f))])
+
+'''137. Write a Python program to extract single key-value pair of a dictionary in variables'''
+# d = {"X" : 2}
+# (a,b), = d.items()
+# print(a)
+# print(b)
+
+'''138. Write a Python program to convert true to 1 and false to 0'''
+# x = 'true'
+# x = int(x=='true')
+# print(x)
+# x = 123
+# x = int(x=='true')
+# print(x)
+
+'''139. Write a Python program to valid a IP address.'''
+# import socket
+# addr = '127.0.0.1'
+# try:
+# 	socket.inet_aton(addr)
+# 	print("valid ip")
+# except socket.error:
+# 	print("Invalid")
+
+'''140. Write a Python program to convert an integer to binary keep leading zeros. '''
+x = 80
+print(format(x,'08b'))
+print(format(x,'010b'))
