@@ -116,10 +116,10 @@
 # print(sorted(t, key = lambda x :float(x[1]),reverse = True ))
 
 '''24. Write a Python program to count the elements in a list until an element is a tuple.'''
-t = [10, 20, 30, (40,50), 60]
-c = 0
-for f in t:
-	if isinstance(f,tuple):
-		break
-	c += 1
-print(c)
+# t = [10, 20, 30, (40,50), 60]
+# c = 0
+# for f in t:
+# 	if isinstance(f,tuple):
+# 		break
+# 	c += 1
+# print(c)

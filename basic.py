@@ -931,6 +931,91 @@ Sample string :'''
 # 	print("Invalid")
 
 '''140. Write a Python program to convert an integer to binary keep leading zeros. '''
-x = 80
-print(format(x,'08b'))
-print(format(x,'010b'))
+# x = 80
+# print(format(x,'08b'))
+# print(format(x,'010b'))
+
+'''141. Write a python program to convert decimal to hexadecimal'''
+# x = 4
+# y = 30
+# print(format(x,'02x'))
+
+'''142. Write a Python program to find the operating system name, platform and platform release date.'''
+# import os
+# import sys
+# import platform
+# import datetime
+# print("operating system name: ",os.name)
+# print("platform name: ",platform.system())
+# print("platform release: ",platform.release())
+
+'''143. Write a Python program to determine if the python shell is executing in 32bit or 64bit mode on operating system.'''
+# import struct 
+# print(struct.calcsize("P" * 8))
+
+'''144. Write a Python program to check if variable is of integer or string'''
+# print( ( isinstance('Hello',int) ) or ( isinstance('Hello',str) ) )
+# print( ( isinstance(['Hello'],int) ) or ( isinstance(['Hello'],str) ) )
+# print((isinstance(5,int)) or (instance(5,str)) )
+
+'''145. Write a Python program to test if a variable is a list or tuple or a set.'''
+# x = {10, 20, 30, 40}
+# if type(x) == list:
+# 	print("its a list")
+# elif type(x) == tuple:
+# 	print("its a tuple")
+# elif type(x) == set:
+# 	print("its a set")
+# else:
+# 	print("Its something else")
+
+'''146. Write a Python program to find the location of Python module sources.'''
+# import os
+# import sys
+# print("list of modules is system: ",sys.path)
+# print("list of modules in operating sys: ",os.path)
+
+'''147. Write a Python function to check whether a number is divisible by another number. Accept two integers values form the user.'''
+# x = int(input("enter no1: ")) 
+# y = int(input("enter no2: ")) 
+# if x % y == 0:
+# 	print("x is divisible by y")
+# else:
+# 	print("x is not divisible by y")
+
+'''148. Write a Python function to find the maximum and minimum numbers from a sequence of numbers.'''
+# data = [1,65,45,87,7,5,40,0]
+# mi = data[0] 
+# mx = data[0]
+# for items in data:
+# 	if mi > items:
+# 		mi = items
+# 	elif mx < items:
+# 		mx = items
+# print("minimum number in list : ",mi)
+# print("maximum number in list : ",mx)
+
+'''149. Write a Python function that takes a positive integer and returns the sum of the cube of all the positive integers smaller than the specified number. '''
+# def cube(x):
+# 	ad = 0
+# 	c = 0
+# 	s = 0
+# 	for n in range(1,x):
+# 		c = n**3
+# 		ad = c
+# 		s = ad +s
+# 	print("the sum of cube : ",s)
+# cube(3)
+
+'''150. Write a Python function to find a distinct pair of numbers whose product is odd from a sequence of integer values'''
+# def odd_product(l): 
+# 	for i in range(len(l)):
+# 		for j in range(len(l)):
+# 			if i != j:
+# 				prod = l[i] * l[j]
+# 				if prod & 1:
+# 					return True
+# d1 = [1,2,3,4,6]
+# d2 = [1,2,4,6] 
+# print(odd_product(d1))
+# print(odd_product(d2))
